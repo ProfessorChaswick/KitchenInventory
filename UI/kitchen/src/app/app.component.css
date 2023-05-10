@@ -1,0 +1,55 @@
+div.big
+{
+    background-color: khaki;
+}
+h3.greet
+{
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+    color:green;
+    text-align: center;
+}
+table
+{
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 3px solid green;
+    background-color:darkgreen;
+    color: green;
+}
+thead
+{
+    color: white;
+}
+th
+{
+    color:lightyellow;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+td
+{
+    background-color: navajowhite;
+    padding: 3px;
+    color: navy;
+    font-weight: bold;
+}
+table.menu
+{
+    margin: 0 0;
+    height: 10px;
+    font-size: 9pt;
+    background-color: blue;
+    color: yellow;
+}
+td.menu
+{
+    background-color: navajowhite;
+    padding: 3px;
+    color: green;
+    font-weight: bold;
+}
+button
+{
+    border-radius: 5px;
+}

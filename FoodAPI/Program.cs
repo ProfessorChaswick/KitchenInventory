@@ -14,6 +14,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<InventoryDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("FoodConnString")));
 
+builder.Services.AddCors((setup) =>
+{
+    setup.AddPolicy("default", (options) =>
+        {
+            options.AllowAnyHeader().AllowAnyHeader().AllowAnyOrigin();
+        });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,6 +30,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("default");
 
 app.UseHttpsRedirection();
 
