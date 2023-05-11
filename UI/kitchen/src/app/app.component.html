@@ -20,20 +20,20 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let food of foods">
+        <tr *ngFor="let food of foods | orderBy: 'qty', true">
             <td>{{ food.item }}</td>
             <td>{{ food.qty }}</td>
             <td>{{ food.units }}</td>
             <td>{{ food.location }}</td>
             <td>{{ food.expires | date: "shortDate" }}</td>
         </tr>
-        <tr>
+        <!-- <tr>
             <td>TEST (Hardcoded not from DB)</td>
             <td>4</td>
             <td>Each</td>
             <td>Counter</td>
             <td>5/16/2023</td>
-        </tr>
+        </tr> -->
     </tbody>
 </table>
 </div> <!-- End of big giant div -->
